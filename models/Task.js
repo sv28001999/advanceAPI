@@ -11,10 +11,10 @@ const TaskSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    _id: {
-        type: mongoose.Schema.Types.ObjectId,
-        default: mongoose.Types.ObjectId
-    }
+    // _id: {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     default: mongoose.Types.ObjectId
+    // }
 })
 
 module.exports = mongoose.model('Task', TaskSchema)
