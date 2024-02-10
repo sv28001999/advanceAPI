@@ -11,8 +11,7 @@ const port = process.env.PORT || 2800
 
 const start = async () => {
     try {
-        // await connectDB(process.env.MONGO_DB_URI)
-        await connectDB("mongodb+srv://sv2800:Shivam%402800@atlascluster.keylavm.mongodb.net/task-manager?retryWrites=true&w=majority")
+        await connectDB(process.env.MONGO_DB_URI)
         app.listen(port, console.log(`Server is hosted at port ${port}..`))
     }
     catch (err) {
