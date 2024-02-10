@@ -7,10 +7,12 @@ const notFound = require('./middlewares/errorPage')
 const handleError = require('./middlewares/handleError')
 require('dotenv').config()
 
+const port = process.env.PORT || 2800
+
 const start = async () => {
     try {
         await connectDB(process.env.MONGO_DB_URI)
-        app.listen(2800, console.log("Server is hosted at port 2800..."))
+        app.listen(port, console.log(`Server is hosted at port ${port}..`))
     }
     catch (err) {
         console.log(err)
